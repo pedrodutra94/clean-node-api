@@ -9,6 +9,6 @@ export class SignUpController {
         return badRequest(new MissingParamError(field))
       }
     }
-    throw new Error('Not implemented yet')
+    return new Error('email')
   }
 }

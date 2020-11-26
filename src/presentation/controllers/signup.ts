@@ -1,7 +1,9 @@
 import { HttpRequest, HttpResponse } from '../protocols/http'
 import { MissingParamError } from '../errors/missing-param-error'
 import { badRequest } from '../helpers/http-helper'
-export class SignUpController {
+import { Controller } from '../protocols/controller'
+
+export class SignUpController implements Controller {
   handle (httpRequest: HttpRequest): HttpResponse {
     const requiredFields = ['name', 'email', 'password', 'passwordConfirmation']
     for (const field of requiredFields) {
@@ -9,6 +11,6 @@ export class SignUpController {
         return badRequest(new MissingParamError(field))
       }
     }
-    return new Error('email')
+    throw new Error('not Implemented Yed')
   }
 }

@@ -1,4 +1,4 @@
-# clean-node-api
+# Clean Node API
 
 Essa API faz parte do treinamento do professor Rodrigo Manguinho (Mango) na Udemy.
 

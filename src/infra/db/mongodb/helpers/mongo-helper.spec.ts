@@ -5,8 +5,9 @@ describe('Mongo Helper', () => {
     await sut.connect(process.env.MONGO_URL)
   })
 
-  afterAll(async () => {
+  afterAll(async (done) => {
     await sut.disconnect()
+    done()
   })
 
   test('Should reconnect if mongodb is down', async () => {

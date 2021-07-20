@@ -11,8 +11,9 @@ describe('Log Mongo Repository', () => {
     await MongoHelper.connect(process.env.MONGO_URL)
   })
 
-  afterAll(async () => {
+  afterAll(async (done) => {
     await MongoHelper.disconnect()
+    done()
   })
 
   beforeEach(async () => {
